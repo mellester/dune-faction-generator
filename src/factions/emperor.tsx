@@ -84,20 +84,26 @@ export const sheet: Faction = {
       advantage({
         title: 'Bidding Payments',
         body: 'When another faction pays for a Treachery Card they pay the Spice to you.',
+        karamaEffect: 'You does not collect spice for any future cards this phase.' + ' (It does not affect a card on which the biding has already started.)', 
       }),
       advantage({
         title: `Shaddam's Favor (AKA Subsidy)`,
         body: dedent`When another non-ally faction buys a Treachery Card you may place any amount of Spice in front of your Player Shield to discount the bidding payment by that amount. Factions may bid more than their Spice reserves if you make a deal to use this ability if the bid is successful. You collect all Spice placed in front of your Player Shield this way at the end of the Bidding phase.`,
+        karamaEffect: 'Prevents you from discounting the price of Treachery Cards, for the rest of the phase.' +
+        ' Does not affect cards on which the biding has already started.' + ' All spice in front of the your Player\'s Shield is discarded to the spice bank. Does not affect the your alliance ability'
+
       }),
       advantage({
         title: 'Sardaukar',
         body: 'Your five starred Troop tokens are double battle strength. Only one Sardaukar can be revived per turn. Sardaukar are considered normal Troop tokens against Fremen.',
+        karamaEffect: 'You may not count your starred troops as double this phase. Must be played before the Presience battle step To affect the current battle.',
       }),
     ],
     alliance: [
       advantage({
         title: `Golden Lion Throne`,
         body: dedent`You may share your great wealth with you ally at any time. You can pay to revive 3 additional troop Troop tokens for your ally, during the Revival phase.`,
+        karamaEffect: "You may not revive any troops for your ally this phase. Or share spice with your ally. Can be played as the emperor's ally is about to revive troops or receive spice."
       }),
     ],
     fate: [
