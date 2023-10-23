@@ -77,7 +77,7 @@ export const sheet: Faction = {
           During each bidding round you may look at each Treachery Card as it comes up for bid. You may keep records about cards.
         `,
         karamaEffect: dedent`
-          You may not look at the cards up for bid.
+          You may not look at any of the cards up for bid.
         `,
       }),
       advantage({
@@ -102,10 +102,10 @@ export const sheet: Faction = {
         title: 'kwisatz haderach',
         body: dedent`
           Once you have lost 7 or more total Troop tokens in battles you gain a token that can be played alongside leaders in battles in one territory per turn to add +2 strength to those leaders and they cannot be called traitor.
-          The token can only be lost in a Lasgun-Shield explosion, and can be revived like a normal leader.
+          The token can only be lost in a Lasgun-Shield explosion, and follows leader disc revival rules to be revived as if its a normal leader.
         `,
         karamaEffect: dedent`
-          You may not use the Kwisatz Haderach token in 1 of your battles. Must be done before the Battle Plans are revealed
+          You may not use the Kwisatz Haderach token in this batlle. Must be done before the Battle Plans are revealed.
         `,
       }),
       advantage({
@@ -113,7 +113,7 @@ export const sheet: Faction = {
         body: dedent`
           During Spice Collection phase take 2 Spice from the Spice Bank if you control one stronghold. Take 3 instead if you control at least two strongholds. You permanently lose this advantage once you gain the Kwisatz Haderach token.`,
         karamaEffect: dedent`
-          TBD
+          You do not collect extra spice. 
         `,
       }),
     ],

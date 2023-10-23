@@ -6,6 +6,7 @@ import {
   faq,
   troop,
   troopSide,
+  extraAsset
 } from '../shared/generate';
 import { pattern1 } from '../presets/patterns';
 import { Faction } from '../shared/schema';
@@ -76,15 +77,17 @@ export const sheet: Faction = {
       advantage({ body: 'You are skilled in technology and production.' }),
       advantage({
         title: 'Initial Treachery Knowledge',
-        body: dedent`You look at the initial Treachery Cards in setup before they are dealt.`,
+        body: dedent`During setup you look at the initial Treachery Cards (Includinging Extra's dealt to factions like the harkonen) before they are dealt.`,
       }),
       advantage({
         title: 'General Bidding Knowledge',
-        body: 'At the beginning of the Bidding phase you may look at the batch of Treachery Cards going up for bid. Then, you may split them into 2 piles, choosing which pile goes up for bid first.',
+        body: 'At the beginning of the Bidding phase you may look at the batch of Treachery Cards going up for bid. Then, you may split them into 2 piles, choosing which pile goes up for bid first. ',
+        karamaEffect: 'You may not look at the cards up for bid or split them.',
       }),
       advantage({
         title: 'Technology',
         body: 'Before the first bid is placed on a card you may replace it with a card from your hand once per phase. If you split the bidding cards into piles the Atreides may see the card you get.',
+        karamaEffect: 'You may not use your technology ability this phase.',
       }),
       advantage({
         title: 'Augmented Troops',
@@ -92,14 +95,17 @@ export const sheet: Faction = {
 
         Your 11 Suboids can move 2 territories if accompanied by a Cyborg, cost 1 Spice to revive, and are always considered half strength because they cannot be Spice dialed.
         
-        If you dial Cyborgs in a battle un-dialed Suboids can die in their place when calculating battle losses (step 4.4). You get 2 uses out of every suboid because if this happens the dialed Cyborgs flip to Patched Cyborgs. Patched Cyborgs can be dialed once for free, then they flip back.`,
+        If you dial Cyborgs in a battle un-dialed Suboids can die in their place when calculating battle losses (step 4.4). You get 2 uses out of every suboid because if this happens the dialed Cyborgs flip to Patched Cyborgs. Patched Cyborgs can be dialed once for free, then they flip back. Patched Cyborgs are not immune to karama`,
+        karamaEffect: dedent`
+        When calculating battle losses your Cyborgs cant be saved by Suboids. (This lasts until the end of the battle phase),  Patched Cyborgs count as normal sterght troop tokens. Play before the battle wheels are revealed.
+        `
       }),
       advantage({
         title: 'Hidden Mobile Surveyor',
-        body: dedent`During setup place the HMS in any non-stronghold territory. It is considered a territory within that territory. No other factions can enter the HMS. You may ship to it like a stronghold (although the HMS is not a stronghold), and move into/out of it like a normal territory.
+        body: dedent`During setup place the HMS in any non-stronghold territory. It is considered a stronghold within that territory. You and only you may ship or cross ship to it (although the HMS does not count as a stronghold for purposes of winning the game), and move into/out of it like a normal territory.
         Troops in the HMS are safe from the Storm and Shai-Hulud.
         
-        During Mentat phase you may move the HMS up to 3 non-stronghold territories. Troops can be picked up/dropped off along the way. (The HMS cannot pick up spice)`,
+        During Mentat phase the player who owns the HMS control token (Aka HMS controller), may move the HMS up to 3 non-stronghold territories. Troops belloning to the HMS controler can be picked up/dropped off along the way. (The HMS cannot pick up spice).`,
       }),
     ],
     alliance: [

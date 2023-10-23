@@ -80,20 +80,23 @@ export const sheet: Faction = {
         title: `Charity`,
         body: 'You always receive CHOAM charity.',
         karamaEffect: dedent`
-          TBD
+          You receive CHOAM charity according to the normal rules.
         `,
       }),
       advantage({
         title: `Worthless Karama`,
         body: 'You may use worthless cards as Karamas. (Play to either stop the use of a faction advantage, ship Troop tokens at half price and the Spice going to the Spice Bank, or purchase a Treachery Card without paying for it)',
         karamaEffect: dedent`
-          You cannot play worthless cards as karamas.
+          You cannot play worthless cards as karamas. Dicarding the worthless card you were about to use.
         `,
       }),
       advantage({
         title: 'prediction',
         body: dedent`
           During setup secretly choose a turn number and a faction. If that faction wins the game on that turn you win instead. (Fremen Special Victory condition does not count).
+        `,
+        karamaEffect: dedent`
+          No effect.
         `,
       }),
       advantage({

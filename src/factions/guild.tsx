@@ -98,12 +98,16 @@ export const sheet: Faction = {
         - Go first, last, or between any other factions.
         - Swap your position with another faction.  (cannot be done after your normal spot in turn order)
         - Force another player to go now, and you take their place in turn order. (cannot be done after your normal spot in turn order)`,
+        karamaEffect: dedent`
+          You go in normal turn order. `,
       }),
       advantage({
         title: 'Retreat',
         body: `Once battle plans are revealed (step 4.3) you may decide to retreat. If you retreat your opponent wins the battle as if by traitor.
 
         Your units may be shipped back to reserves at stronghold shipping rates. Your Treachery Cards can be saved by paying Spice for each equal to your leader's strength. If your leader would've been killed in battle they die. Spice you use to Spice dial and retreat is paid to the Spice bank. You cannot retreat if the battle is resolved with a Traitor or Break Conditioning.`,
+        karamaEffect: dedent`
+        Prevents you from retreating. `,
       }),
     ],
     alliance: [
